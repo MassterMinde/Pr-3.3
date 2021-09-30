@@ -5,7 +5,6 @@ public class Square extends Rectangle{
     public Square(double side) {
         this.width=side;
         this.length=side;
-        setWidth(side);
     }
 
     public Square(String color, boolean filled, double side) {
