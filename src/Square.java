@@ -1,44 +1,43 @@
 public class Square extends Rectangle{
-    double side;
     public Square() {
     }
 
     public Square(double side) {
-        this.side=side;
+        this.width=side;
+        this.length=side;
         setWidth(side);
     }
 
     public Square(String color, boolean filled, double side) {
         super(color,filled,side,side);
-        this.side=side;
     }
 
     public double getSide() {
-        return side;
+        return length;
     }
     @Override
     public void setWidth(double width){
-        this.side=width;
+        this.width=width;
+        this.length=width;
     }
     @Override
     public void setLength(double length){
-        this.side=length;
-    }
+        this.width=length;
+        this.length=length;    }
 
     @Override
     public double getLength() {
-        return side;
+        return length;
     }
 
     @Override
     public double getWidth() {
-        return side;
+        return length;
     }
 
     public void setSide(double side) {
-        this.side = side;
-        setWidth(side);
-        setLength(side);
+        this.width=side;
+        this.length=side;
     }
 
     @Override
@@ -46,7 +45,7 @@ public class Square extends Rectangle{
         return "Square{" +
                 "color='" + color + '\'' +
                 ", filled=" + filled +
-                ", side=" + side +
+                ", side=" + getSide() +
                 '}';
     }
 }
